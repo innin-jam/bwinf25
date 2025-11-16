@@ -61,10 +61,17 @@ Algorythmus nutzen.
 Hier ist ein solcher Algorythmus. Lass uns als Beispiel folgende
 Figuren:
 
+```text
+Kurz 1
+Kurz2 1
+Mittel 2
+Lang 4
+```
+
 | 1 Takt | 2 Takte | 4 Takte |
 | ------ | ------- | ------- |
 | Kurz   | Mittel  | Lang    |
-| Kurz2  |         |         |
+| Kurz2  | ---     | ---     |
 
 Im ersten Schritt schaut sich unser Algorythmus an, welche Längen
 ihm zur verfügung stehen. (1, 2 und 4 in unserem Fall)
