@@ -107,7 +107,7 @@ flowchart LR
     2 --> 2.1((1)) & 2.2((2)) & 2.4((4))
     4 --> 4.done((w))
     classDef gray fill:#aab,stroke:#667,color:#667
-    class a gray
+    class a,1,2,4 gray
 ```
 
 Und so in der Iteration darauf:
@@ -125,7 +125,7 @@ flowchart LR
     2.2 --> 2.2.exit((w))
     2.4 --x 2.4.exit(( ))
     classDef gray fill:#aab,stroke:#667,color:#667
-    class a,1,2,4 gray
+    class a,1,2,4,1.1,1.2,1.4,2.1,2.2,2.4 gray
 ```
 
 Das hier ist der Algorythmus in der letzten Iteration. Jeder
