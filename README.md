@@ -59,7 +59,7 @@ viele Kombinationen es geben wird, wenn wir einen rekursiven
 Algorythmus nutzen.
 
 Hier ist ein solcher Algorythmus. Lass uns als Beispiel folgende
-Figuren:
+Figuren nehmen:
 
 ```text
 Kurz 1
