@@ -61,12 +61,10 @@ Algorythmus nutzen.
 Hier ist ein solcher Algorythmus. Lass uns als Beispiel folgende
 Figuren nehmen:
 
-```text
-Kurz 1
-Kurz2 1
-Mittel 2
-Lang 4
-```
+- Figur: "Kurz", Länge: 1 Takt
+- Figur: "Kurz2", Länge: 1 Takt
+- Figur: "Mittel", Länge: 2 Takte
+- Figur: "Lang", Länge: 4 Takte
 
 Wenn wir diese Figuren nach deren Länge sortieren erhalten wir
 folgende Tabelle:
