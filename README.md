@@ -75,13 +75,14 @@ folgende Tabelle:
 | Kurz2  | ---     | ---     |
 
 Im ersten Schritt schaut sich unser Algorythmus an, welche Längen
-ihm zur verfügung stehen. (1, 2 und 4 in unserem Fall)
+ihm zur verfügung stehen. (1, 2 und 4 in diesem Fall)
 
 Für jeden dieser Längen ruft er sich selbst erneut auf.
 
 ```mermaid
 flowchart LR
     a(( )) --> 1((1)) & 2((2)) & 4((4))
+    style a fill:#aaa,stroke:#444
 ```
 
 Diese Iterationen haben nun aber Daten. Nämlich jeweils 1, 2
@@ -105,6 +106,8 @@ flowchart LR
     1 --> 1.1((1)) & 1.2((2)) & 1.4((4))
     2 --> 2.1((1)) & 2.2((2)) & 2.4((4))
     4 --> 4.done((w))
+    classDef gray fill:#aab,stroke:#667,color:#667
+    class a gray
 ```
 
 Und so in der Iteration darauf:
@@ -121,6 +124,8 @@ flowchart LR
     2.1 --> 2.1.1((1)) & 2.1.2((2)) & 2.1.4((4))
     2.2 --> 2.2.exit((w))
     2.4 --x 2.4.exit(( ))
+    classDef gray fill:#aab,stroke:#667,color:#667
+    class a,1,2,4 gray
 ```
 
 Das hier ist der Algorythmus in der letzten Iteration. Jeder
@@ -151,6 +156,8 @@ flowchart LR
     1.1.1.1 --> 1.1.1.1.exit((w))
     1.1.1.2 --x 1.1.1.2.exit(( ))
     1.1.1.4 --x 1.1.1.4.exit(( ))
+    classDef gray fill:#aab,stroke:#667,color:#667
+    class a,1,2,4,1.1,1.2,1.4,2.1,2.2,2.4,1.1.1,1.1.2,1.1.4,1.2.1,1.2.2,1.2.4,2.1.1,2.1.2,2.1.4,1.1.1.1,1.1.1.2,1.1.1.4 gray
 ```
 
 Am Ende haben wir eine Liste mit allen möglichen Kombianationen
