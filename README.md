@@ -68,6 +68,9 @@ Mittel 2
 Lang 4
 ```
 
+Wenn wir diese Figuren nach deren Länge sortieren erhalten wir
+folgende Tabelle:
+
 | 1 Takt | 2 Takte | 4 Takte |
 | ------ | ------- | ------- |
 | Kurz   | Mittel  | Lang    |
