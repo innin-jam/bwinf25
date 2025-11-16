@@ -1,3 +1,21 @@
+# Aufgabe 1: Choreograph
+
+Team-ID: ???
+
+Team-Name: ???
+
+Bearbeiter/-innen dieser Aufgabe: ???
+
+16. November 2025
+
+## Inhaltsverzeichnis
+
+1. [Lösungsidee](#Lösungsidee)
+2. [Umsetzung](#Umsetzung)
+3. [Werkzeuge](#Werkzeuge)
+4. [Beispiele](#Beispiele)
+5. [Quellcode](#Quellcode)
+
 ## Lösungsidee
 
 Um zu bestimmen, was die beste Choreographie in einem bestimmten
@@ -40,7 +58,7 @@ Längen variiert. Allerdings müssen wir nicht unbedingt wissen, wie
 viele Kombinationen es geben wird, wenn wir einen rekursiven
 Algorythmus nutzen.
 
-Hier ist ein solcher Algorythmus. Lass uns als Beispiel folgene
+Hier ist ein solcher Algorythmus. Lass uns als Beispiel folgende
 Figuren:
 
 | 1 Takt | 2 Takte | 4 Takte |
@@ -58,8 +76,8 @@ flowchart LR
     a(( )) --> 1((1)) & 2((2)) & 4((4))
 ```
 
-Diese iterationen haben nun aber Daten. Nämlich jeweils 1, 2
-und 4. Sie schauen zuert, ob die summe ihrer Daten kleiner als die
+Diese Iterationen haben nun aber Daten. Nämlich jeweils 1, 2
+und 4. Sie schauen zuert, ob die Summe ihrer Daten kleiner als die
 Länge unseres Stückes ist (das ist der Fall für "1" und "2" aber
 nicht für "4"). Und rufen sich dann erneut für alle Längen auf
 übergeben aber ihre bereits gesammelten Längen.
@@ -143,7 +161,7 @@ schauen, ob am Ende auch die Tänzer in der richtigen Reihenfolge
 stehen.
 
 Wir werden wieder eine ähnliche rekursive Funktion verwenden, um
-alle Kombinationen von Figuren für eine kombination aus Längen
+alle Kombinationen von Figuren für eine Kombination aus Längen
 auszuprobieren. Dabei rufen wir die Funktion für jede mögliche
 Kombination aus Längen aus. Diese geht dann die Liste von Längen
 durch und ruft sich selbst mit jeder verfügbaren Figur von einer
@@ -190,7 +208,7 @@ nach _Anwendung_ der Figur. Daran können wir erkennen, von welcher
 Position welche Position kommt.
 
 Eine Tanzfigur könnte folgende Endpositionen haben (ich werde im
-Folgenden nur 8 statt 16 Zeichen/Tänzern verwenden, damit das
+Folgenden nur 8 statt 16 Zeichen/Tänzern verwenden) damit das
 Ganze nicht unnötig komplex wird.
 
 ```text
@@ -213,22 +231,20 @@ erste Position mit 0, die zweite mit 1 usw.
 [3, 0, 1, 2, 7, 6, 5, 4]
 ```
 
-Wenn wir wissen, das die neue erste Position immer von der vierten
-Postion kommt und die neue zweite immer von der ersten usw. können
-wir eine Figur auch mehrfach anwenden.
+Wenn wir wissen, dass die neue erste Position immer von der
+vierten Postion kommt und die neue zweite immer von der ersten
+usw. können wir auch die Reihenfolge der Tänzer nach zwei dieser
+Figuren bestimmen.
 
 ```
 Cast Four und nochmal Cast Four:
 CDABGHEF
 ```
 
-Eine Figur mit dieser Logik _ziehen_ wir die Tänzer immer von
-deren letzter Position.
-
-Jetzt wo wir wissen, wie sich unsere Tänzer nach _Anwendung_ von
-Tanzfiguren bewegen, können wir am Ende die Position mit der
-Original position vergleichen und wissen somit, ob die Folge von
-Figuren gültig ist oder nicht.
+Jetzt wo wir wissen, wie sich unsere Tänzer nach jeder Tanzfiguren
+bewegen, können wir am Ende die Reihenfolge der Tänzer mit der
+original Reihenfolge vergleichen und wissen somit, ob die Folge
+von Figuren gültig ist oder nicht.
 
 ### Was ist die beste Choreo?
 
@@ -316,7 +332,7 @@ wird zu:
 
 ### Sortieren in Python
 
-Pythons `sort()` methode macht das Sortieren unserer Langen Liste
+Pythons `sort()` methode macht das Sortieren unserer langen Liste
 von Choreographien nach nach den verschiedenen Kriterien einfach.
 
 ## Werkzeuge
